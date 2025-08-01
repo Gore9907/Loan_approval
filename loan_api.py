@@ -30,3 +30,7 @@ def predict(input: LoanInput):
     prediction = model.predict(processed_input)[0]
 
     return {"prediction": "Approved" if prediction == 1 else "Rejected"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("loan_api:app", host="0.0.0.0", port=8000)
