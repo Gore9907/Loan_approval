@@ -1,4 +1,0 @@
-*.npy
-*.pkl
-*.joblib
-__pycache__/
