@@ -1,2 +1,4 @@
-.npy
-.csv
+*.npy
+*.pkl
+*.joblib
+__pycache__/
