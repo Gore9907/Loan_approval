@@ -33,6 +33,8 @@ class LoanInput(BaseModel):
 @app.post("/predict")
 def predict(input: LoanInput):
     input_df = pd.DataFrame([input.dict()])
+    input_df['payment_each_year'] = input_df['loan_amount'] / input_df['loan_term']
+    input_df = input_df.drop(columns=['loan_term', 'loan_amount'])
     
     processed_input = preprocessor.transform(input_df)
 
