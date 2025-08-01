@@ -3,8 +3,17 @@ from pydantic import BaseModel
 import joblib
 import numpy as np
 import pandas as pd
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 preprocessor = joblib.load("preprocessor.joblib")
 model = joblib.load("loan_xgb_model.pkl")
