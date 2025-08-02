@@ -1,7 +1,7 @@
 # 💸 Loan Approval Predictor  
 Real-time loan approval prediction with explainable AI
 
-![App Screenshot](model/form_ui.png)
+![App Screenshot](Loan_app_demo.png)
 
 ---
 
