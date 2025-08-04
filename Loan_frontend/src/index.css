@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
-  background-color: #F3F4F6;
+  background-color: #20b2aa;
   color: #111827;
   line-height: 1.6;
 }
@@ -16,7 +16,7 @@ body {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: white;
+  background-color: #e0e4e7;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
@@ -29,7 +29,7 @@ select:focus {
 }
 
 .button {
-  background-color: rgb(65, 123, 195);
+  background-color: #008b8b;
   color: white;
   padding: 0.75rem 1.25rem;
   border: none;
@@ -61,7 +61,7 @@ select:focus {
 
 h1, h2 {
   font-weight: 700;
-  color: #1E3A8A;
+  color: #404040;
   margin-bottom: 1rem;
   text-align: center;
 }
