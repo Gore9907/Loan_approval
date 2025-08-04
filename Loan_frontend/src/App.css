@@ -66,6 +66,7 @@ select{
 @media (max-width: 500px) {
   form{
   padding: 1rem;
+  max-width: 90%;
   }
   .radio-group {
    gap: 10px;
