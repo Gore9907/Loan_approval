@@ -7,9 +7,10 @@
 
 body {
   font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
-  background-color: #20b2aa;
   color: #404040;
   line-height: 1.6;
+  background: linear-gradient(to bottom, #20b2aa 25%, #e0e4e7 70%);
+  min-height: 100vh;
 }
 
 .container {
@@ -17,7 +18,7 @@ body {
   margin: 2rem auto;
   padding: 2rem;
   background-color: #e0e4e7;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -61,8 +62,9 @@ select:focus {
 
 h1, h2 {
   font-weight: 700;
-  color: #404040;
+  color: #030404;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   text-align: center;
 }
 

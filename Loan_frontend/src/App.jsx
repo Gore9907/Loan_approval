@@ -41,9 +41,9 @@ function App() {
     }
   };
   return (
-
+    <>
+    <h1>Loan Approval</h1>
     <form className='form'onSubmit={handleSubmit}>
-      <h1>Loan Approval</h1>
       <label className="form-label">
         No of Dependents:
         <input
@@ -180,6 +180,7 @@ function App() {
       </div>
       )}
     </form>
+    </>
   )
 }
 
