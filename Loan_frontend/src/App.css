@@ -28,7 +28,7 @@ input {
   border-radius: 6px;
   font-size: 1rem;
   background-color: #fff;
-  color: #111827;
+  color: #404040;
   flex: 1;
   max-width: 200px; 
 }
@@ -37,7 +37,7 @@ select{
   border-radius: 6px;
   font-size: 1rem;
   background-color: #fff;
-  color: #111827;
+  color: #404040;
   flex: 1;
   max-width: 200px;
 }
