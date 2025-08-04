@@ -23,11 +23,11 @@ It's fast, smart, and built with real-world loan data from Kaggle!
 ### Machine Learning
 - Model: **XGBoost Classifier**
 - Trained on features like income, credit score, assets, and loan amount
-- Achieves **98.6% accuracy** on test data
+- Achieves **99.3% accuracy** on test data
 
 ### Model Performance
-- Accuracy: 98.6%
-- F1-Score: 0.989 (Approved), 0.981 (Rejected)
+- Accuracy: 99.3%
+- F1-Score: 0.994 (Approved), 0.991 (Rejected)
 
 ## Tech Stack
 
