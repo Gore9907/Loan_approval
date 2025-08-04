@@ -34,7 +34,11 @@ class LoanInput(BaseModel):
 def predict(input: LoanInput):
     input_df = pd.DataFrame([input.dict()])
     input_df['payment_each_year'] = input_df['loan_amount'] / input_df['loan_term']
-    input_df = input_df.drop(columns=['loan_term', 'loan_amount'])
+    input_df['PTI'] = input_df['payment_each_year'] / input_df['income_annum']
+    input_df = input_df.drop(columns=['payment_each_year', 'loan_amount'])
+
+    if input_df.iloc[0]['PTI'] > 0.5:
+        return {"prediction": "Rejected"}
     
     processed_input = preprocessor.transform(input_df)
 
