@@ -14,7 +14,7 @@ Real-time loan approval prediction with explainable AI
 ## What’s This?
 
 A full-stack machine learning app that predicts whether your loan will be **approved or rejected** based on your personal and financial information.  
-It's fast, smart, and built with real-world loan data from Kaggle!
+It's fast, smart, and built with loan data from Kaggle!
 
 ---
 
