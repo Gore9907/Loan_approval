@@ -1,84 +1,206 @@
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
-form{
-  max-width: 800px;
+body {
+  font-family: 'Inter', 'Roboto', 'Open Sans', sans-serif;
+  color: #404040;
+  line-height: 1.6;
+  background: linear-gradient(to bottom, #20b2aa 25%, #e0e4e7 70%);
+  min-height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(224, 228, 231, 0.85);
+  backdrop-filter: saturate(1.05) blur(6px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.header-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 800;
+  color: #053b3a;
+}
+
+.page {
+  max-width: 1000px;
   margin: 2rem auto;
-  padding: 2rem;
-  background-color: #e0e4e7;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+}
+.grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(2, 8, 23, 0.06);
+  padding: 20px;
 }
 
+.h2 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0b1a1a;
+  text-align: left;
+}
+.sub {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #526274;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+.form--plain {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
 .form-label {
   font-weight: 600;
-  padding: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 5px;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
 }
-input {
-  padding: 3px;
-  border: 1px solid #D1D5DB;
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #404040;
-  flex: 1;
-  max-width: 200px; 
-}
-select{
-  border: 1px solid #D1D5DB;
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #404040;
-  flex: 1;
-  max-width: 200px;
+.label-text {
+  font-size: 0.85rem;
+  color: #2a3743;
 }
 
-.radio-label {
-  display: flex;
-  align-items: center;
-  gap: 8px; 
-  font-weight: 600; 
-  flex: 1;
-  max-width: 200px;
+.input,
+.select {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #404040;
 }
+.input:focus,
+.select:focus {
+  border-color: #60a5fa;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.4);
+}
+
 .radio-group {
   display: flex;
   align-items: center;
-  gap: 30px; 
-  font-weight: 600; 
+  gap: 20px;
 }
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 .button-container {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  border-top: #D1D5DB 1px solid;
+  border-top: #d1d5db 1px solid;
   padding-top: 1rem;
 }
-@media (max-width: 500px) {
-  form{
+.button {
+  background-color: #008b8b;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+.button:hover {
+  background-color: #4f688f;
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result-title {
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+  color: #0b1a1a;
+}
+.callout {
+  margin-top: 1rem;
   padding: 1rem;
-  max-width: 90%;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #34d399;
+}
+.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+.skel .bar {
+  height: 14px;
+  background: #e8edf1;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.skel .box {
+  height: 80px;
+  background: #e8edf1;
+  border-radius: 10px;
+}
+
+.footer {
+  color: #3d4b57;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .page {
+    margin: 1rem auto;
   }
-  .radio-group {
-   gap: 10px;
+  .card {
+    padding: 16px;
   }
-  .radio-label {
-    max-width: 120px; 
-  }
-  
-  select{
-    max-width: 120px;
-  }
-  input {
-    max-width: 120px; 
+  .button {
+    font-size: 0.9rem;
   }
 }
